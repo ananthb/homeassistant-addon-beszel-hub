@@ -1,0 +1,16 @@
+name: "Beszel Hub"
+version: "0.9.0"
+slug: "beszel-hub"
+description: "Beszel Hub for Home Assistant"
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+url: "https://github.com/ananthb/homeassistant-beszel-hub"
+schema:
+  csp: str?
+  disable_password_auth: bool?
+  user_creation: bool?
+image: "matthewhadley/homeassistant-beszel-hub-{arch}"

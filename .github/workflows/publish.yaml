@@ -1,0 +1,25 @@
+name: Publish
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish:
+  name: Build and publish Docker image
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout the code
+      uses: actions/checkout@v3
+    - name: Login to ghcr.io
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ananthb
+        password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Build the addon
+      uses: home-assistant/builder@master
+      with:
+        args: |
+          --all \
+          --target . \
+          --docker-hub ghcr.io/ananthb

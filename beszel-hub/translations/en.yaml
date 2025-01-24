@@ -1,0 +1,15 @@
+---
+configuration:
+  csp:
+    name: Content Security Policy
+    description: >-
+      Beszel Hub HTTP Server's Content Security Policy header value.
+  disable_password_auth:
+    name: Disable Password Authentication
+    description: >-
+      Disable password authentication for Beszel Hub HTTP Server.
+  user_creation:
+    name: User Creation
+    description: >-
+      Enable automatic user creation for OIDC users on the
+      Beszel Hub HTTP Server.
